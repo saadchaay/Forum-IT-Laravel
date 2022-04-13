@@ -4,7 +4,7 @@
 
     <!-- trending posts today section -->
     <main class="sm:container sm:mx-auto sm:mt-10">
-        <h2 class="max-w-sm my-6 font-bold text-lg">Trending today</h2>
+        <h2 class="max-w-sm my-6 font-bold text-lg">Recent posts</h2>
             <div class="flex justify-around flex-wrap">
                 @for($i=0; $i<3; $i++)
                 <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5">
@@ -32,9 +32,9 @@
         <div class="col-span-2">
             <h2 class="max-w-sm my-6 font-bold text-lg">Top Posts</h2>
             <div class="h-10 bg-white flex border border-gray-200 rounded items-center">
-                <input placeholder="Category..." name="select" id="select" class="px-4 appearance-none outline-none text-gray-800 w-full" checked />
+                <input placeholder="Category..." name="select" id="select" class="px-4 appearance-none outline-none text-gray-800 w-full bg-white" checked />
 
-                <button class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-gray-600">
+                <button class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-gray-600 bg-white">
                     <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -51,6 +51,14 @@
                 @for($i=0; $i<5; $i++)
                 <div class="px-4 w-full">
                     <div class="bg-white shadow-2xl rounded-lg mb-6 tracking-wide" >
+                        <div class="author flex items-center -ml-3 my-3">
+                            <div class="user-logo">
+                                <img class="w-12 h-12 object-cover rounded-full mx-4  shadow" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80" alt="avatar">
+                            </div>
+                            <h2 class="text-sm tracking-tighter text-gray-900">
+                                <a href="#">By Mohammed Ibrahim</a> <span class="text-gray-600">21 SEP 2015.</span>
+                            </h2>
+                        </div>
                         <div class="md:flex-shrink-0">
                             <img src="https://ik.imagekit.io/q5edmtudmz/post1_fOFO9VDzENE.jpg" alt="mountains" class="w-full h-64 rounded-lg rounded-b-none">
                         </div>
@@ -78,13 +86,14 @@
                                     5
                                 </a>
                             </div>
-                            <div class="author flex items-center -ml-3 my-3">
-                                <div class="user-logo">
-                                    <img class="w-12 h-12 object-cover rounded-full mx-4  shadow" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80" alt="avatar">
-                                </div>
-                                <h2 class="text-sm tracking-tighter text-gray-900">
-                                    <a href="#">By Mohammed Ibrahim</a> <span class="text-gray-600">21 SEP 2015.</span>
-                                </h2>
+                        </div>
+                        <div class="flex flex-wrap pb-4">
+                            <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
+                            <div class="w-full md:w-full px-3 mb-2 mt-2">
+                                <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="body" placeholder='Type Your Comment' required></textarea>
+                            </div>
+                            <div class="w-full md:w-full flex items-start md:w-full px-3">
+                                <button class="p-2 px-5 text-gray-100 text-lg rounded-lg focus:border-2 border-blue-300">Post Comment</button>
                             </div>
                         </div>
                     </div>
