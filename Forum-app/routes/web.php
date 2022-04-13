@@ -14,9 +14,9 @@ use \App\Http\Controllers\PostsController;
 |
 */
 Route::get('/', [PageController::class, 'index']);
+Route::get('/user/profil', [PageController::class, 'profil']);
 Route::resource('Posts', PostsController::class);
 
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
