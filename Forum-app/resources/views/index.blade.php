@@ -3,8 +3,10 @@
 @section('content')
 
     <main class="sm:container sm:mx-auto sm:mt-10">
-        <div class="flex justify-around">
-                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg">
+        <h2 class="max-w-sm my-6 font-bold">Trending today</h2>
+            <div class="flex justify-between flex-wrap">
+                @for($i=0; $i<3; $i++)
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5">
                     <div id="header" class="flex items-center mb-4">
                         <img alt="avatar" class="w-20 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
                         <div id="header-text" class="leading-5 ml-6 sm">
@@ -16,7 +18,12 @@
                         <q class="italic text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</q>
                     </div>
                 </div>
+                @endfor
             </div>
-        </div>
     </main>
+    <section class="">
+        <div>
+
+        </div>
+    </section>
 @endsection
