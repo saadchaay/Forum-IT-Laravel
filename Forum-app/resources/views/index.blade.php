@@ -5,7 +5,7 @@
     <!-- trending user today section -->
     <main class="sm:container sm:mx-auto sm:mt-10">
         <h2 class="max-w-sm my-6 font-bold text-lg">Recent posts</h2>
-            <div class="flex justify-around flex-wrap">
+            <div class="flex justify-around flex-no-wrap">
                 @for($i=0; $i<3; $i++)
                 <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5">
                     <div id="header" class="flex items-center mb-4">
@@ -46,7 +46,7 @@
                     </svg>
                 </label>
             </div>
-            <!-- section all user -->
+            <!-- section all Posts -->
             <div class="my-6">
                 @for($i=0; $i<5; $i++)
                 <div class="px-4 w-full">
@@ -107,15 +107,15 @@
             <div class="flex justify-center flex-col items-center">
                 @for($i=0; $i<3; $i++)
                     <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5 flex justify-around items-center">
-                        <div id="header" class="flex items-center mb-4">
+                        <div id="header" class="flex items-center mb-4 flex-wrap">
                             <img alt="avatar" class="w-20 rounded-full border-2 border-gray-300" src="https://picsum.photos/seed/picsum/200" />
                             <div id="header-text" class="leading-5 ml-6 sm">
                                 <h4 id="name" class="text-xl font-semibold">John Doe</h4>
                                 <h5 id="job" class="font-semibold text-blue-600">Designer</h5>
                             </div>
-                        </div>
-                        <div class="text-base text-blue-900 font-bold">
-                            Votes: 122
+                            <div class="text-base text-blue-900 font-bold">
+                                Votes: 122
+                            </div>
                         </div>
                     </div>
                 @endfor
