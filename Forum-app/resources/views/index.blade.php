@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <!-- trending posts today section -->
+    <!-- trending user today section -->
     <main class="sm:container sm:mx-auto sm:mt-10">
         <h2 class="max-w-sm my-6 font-bold text-lg">Recent posts</h2>
             <div class="flex justify-around flex-wrap">
@@ -28,7 +28,7 @@
     </main>
     <!-- body section -->
     <section class="sm:container sm:mx-auto sm:mt-10 grid grid-cols-3 gap-4">
-        <!-- main top section posts -->
+        <!-- main top section user -->
         <div class="col-span-2">
             <h2 class="max-w-sm my-6 font-bold text-lg">Top Posts</h2>
             <div class="h-10 bg-white flex border border-gray-200 rounded items-center">
@@ -46,7 +46,7 @@
                     </svg>
                 </label>
             </div>
-            <!-- section all posts -->
+            <!-- section all user -->
             <div class="my-6">
                 @for($i=0; $i<5; $i++)
                 <div class="px-4 w-full">
