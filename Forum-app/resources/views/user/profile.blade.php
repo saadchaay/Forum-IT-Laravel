@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <form class="w-full space-y-6 sm:space-y-8" method="POST"
-                          action="{{ route('user.update') }}">
+                          action="{{ url('user.update') }}">
                         @csrf
 
                         <div class="flex flex-wrap">
@@ -105,7 +105,9 @@
             </div>
             <div class="flex-col flex-auto">
                 <h2 class="max-w-sm my-6 font-bold text-lg">All My Posts</h2>
+                <div class="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5">
 
+                </div>
             </div>
         </div>
     </div>
