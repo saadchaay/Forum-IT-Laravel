@@ -20,7 +20,7 @@ Route::get('/', [PageController::class, 'index']);
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 
 Route::resource('user', UserController::class);
-Route::resource('Posts', PostsController::class);
+Route::resource('posts', PostsController::class);
 
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
