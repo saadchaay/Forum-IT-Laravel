@@ -1,5 +1,6 @@
 let modal = document.getElementById("modal");
 let body = document.getElementById("body-content");
+
 fadeOut(modal);
 function modalHandler(val) {
     if (val) {
@@ -31,3 +32,4 @@ function fadeIn(el, display) {
         }
     })();
 }
+
