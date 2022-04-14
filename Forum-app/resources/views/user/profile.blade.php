@@ -1,51 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="py-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
+    <div class="py-12 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
         <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
             <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
-                <h1 class="text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Enter Billing Details</h1>
-                <label for="name" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Title</label>
-                <input id="name" class="form-input w-full @error('name')  border-red-500 @enderror" placeholder="James" />
-                <label for="email2" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Card Number</label>
-                <div class="relative mb-5 mt-2">
-                    <div class="absolute text-gray-600 flex items-center px-4 border-r h-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card bg-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <rect x="3" y="5" width="18" height="14" rx="3" />
-                            <line x1="3" y1="10" x2="21" y2="10" />
-                            <line x1="7" y1="15"
-                                  x2="7.01" y2="15" />
-                            <line x1="11" y1="15" x2="13" y2="15" />
-                        </svg>
+                <h1 class="text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4 text-2xl">Add Post</h1>
+                <label for="title" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Title</label>
+                <input id="title" class="form-input w-full @error('title')  border-red-500 @enderror my-3" />
+                <label for="body" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Body</label>
+                <textarea class="form-input w-full @error('title')  border-red-500 @enderror resize-none h-32 my-3">
+                </textarea>
+                <div class="my-1">
+                    <label for="image" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Add photo</label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="flex text-sm text-gray-600">
+                                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                    <span>Upload a file</span>
+                                    <input id="file-upload" name="image" type="file" class="sr-only">
+                                </label>
+                                <p class="pl-1">or drag and drop</p>
+                            </div>
+                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                        </div>
                     </div>
-                    <input id="email2" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border" placeholder="XXXX - XXXX - XXXX - XXXX" />
-                </div>
-                <label for="expiry" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">Expiry Date</label>
-                <div class="relative mb-5 mt-2">
-                    <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event bg-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <rect x="4" y="5" width="16" height="16" rx="2" />
-                            <line x1="16" y1="3" x2="16" y2="7" />
-                            <line x1="8" y1="3" x2="8" y2="7" />
-                            <line x1="4" y1="11" x2="20" y2="11" />
-                            <rect x="8" y="15" width="2" height="2" />
-                        </svg>
-                    </div>
-                    <input id="expiry" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
-                </div>
-                <label for="cvc" class="text-gray-800 text-sm font-bold leading-tight tracking-normal">CVC</label>
-                <div class="relative mb-5 mt-2">
-                    <div class="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                            <circle cx="12" cy="12" r="9"></circle>
-                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                            <polyline points="11 12 12 12 12 16 13 16"></polyline>
-                        </svg>
-                    </div>
-                    <input id="cvc" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
                 </div>
                 <div class="flex items-center justify-start w-full">
                     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">Submit</button>
@@ -61,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div class="sm:container sm:mx-auto sm:mt-10 grid grid-cols-3 gap-4">
+    <div id="body-content" class="sm:container sm:mx-auto sm:mt-10 grid grid-cols-3 gap-4">
         <div class="flex justify-around col-span-3">
             <!-- section user information -->
             <div class="col-span-1">
@@ -169,8 +150,8 @@
             <div class="col-span-2">
                 <h2 class="max-w-sm my-6 font-bold text-lg">All My Posts</h2>
                 <!-- buttons -->
-                <div class="flex justify-end">
-                    <button class="px-5 py-3 mb-3 text-cool-gray-50 font-bold rounded-md bg-indigo-800 hover:bg-indigo-900">Add Post</button>
+                <div class="flex justify-end" id="button_id">
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 font-bold text-3xl transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm" onclick="modalHandler(true)">Add Post</button>
                 </div>
                 @for($i=0; $i<3; $i++)
                     <div class="px-4 max-w-xl bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-0.5">
@@ -218,5 +199,6 @@
             </div>
         </div>
     </div>
-@endsection
 
+    <script src="{{ asset('js/displayModal.js') }}"></script>
+@endsection
