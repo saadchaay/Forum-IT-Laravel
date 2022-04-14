@@ -33,3 +33,7 @@ function fadeIn(el, display) {
     })();
 }
 
+function displayComments() {
+    console.log("hello");
+}
+
