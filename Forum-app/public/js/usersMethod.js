@@ -1,4 +1,5 @@
 let modal = document.getElementById("modal");
+let confirmModal = document.getElementById("confirm-modal");
 let body = document.getElementById("body-content");
 
 // fadeOut(modal);
@@ -32,5 +33,11 @@ function fadeIn(el, display) {
         }
     })();
 }
-
-
+// confirm msg delete
+function confirmDelete(ID) {
+    if(ID) {
+        fadeIn(confirmModal);
+    } else {
+        fadeOut(confirmModal);
+    }
+}
