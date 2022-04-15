@@ -34,8 +34,8 @@ function fadeIn(el, display) {
     })();
 }
 // confirm msg delete
-function confirmDelete(ID) {
-    if(ID) {
+function confirmDelete(val) {
+    if(val) {
         fadeIn(confirmModal);
     } else {
         fadeOut(confirmModal);
