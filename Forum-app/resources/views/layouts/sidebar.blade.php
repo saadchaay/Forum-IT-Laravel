@@ -45,5 +45,5 @@
             @yield('content')
         </div>
     </div>
-
+    <script src="{{ asset('js/usersMethod.js') }}" ></script>
 </body>

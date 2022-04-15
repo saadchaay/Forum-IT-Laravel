@@ -22,7 +22,7 @@ function fadeOut(el) {
     })();
 }
 function fadeIn(el, display) {
-    body.style.opacity = 0.3;
+    body.style.hidden = true;
     el.style.opacity = 0;
     el.style.display = display || "flex";
     (function fade() {

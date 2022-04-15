@@ -88,6 +88,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-gray-200">
+                    @for($i=0; $i<8; $i++)
                     <tr class="bg-white border-b-2 border-gray-200 text-center">
                         <td class="">
                             <span>1</span>
@@ -122,10 +123,11 @@
                               </span>
                         </td>
                     </tr>
+                    @endfor
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <script src="{{ asset('js/usersMethod.js') }}" ></script>
+
 @endsection
