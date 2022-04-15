@@ -27,7 +27,6 @@
                 </div>
             </div>
         </div>
-
         <div id="body-content" class="sm:container sm:mx-auto sm:mt-1">
             <h2 class="font-bold text-2xl text-blue-900 text-center my-8">Posts Management</h2>
             <div class="mt-2">
