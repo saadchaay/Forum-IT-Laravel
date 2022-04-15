@@ -1,8 +1,11 @@
 @extends('layouts.sidebar')
 
 @section('content')
-    <div class="flex-col justify-start items-center">
+    <div class="sm:container flex-col justify-start items-center">
         <h2 class="font-bold text-2xl text-blue-900 text-center my-8">Users Management</h2>
+        <div class="flex justify-start ml-8">
+            <button onclick="displayModal()" class="text-cool-gray-50 bg-blue-900 px-3 py-1.5 font-bold text-base rounded">Add User</button>
+        </div>
         <div id="body-content" class="sm:container sm:mx-auto sm:mt-1">
             <div class="mt-2">
                 <table class="max-w-5xl mx-auto table-auto">
