@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PageController;
 use \App\Http\Controllers\PostsController;
 use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +20,9 @@ Auth::routes();
 Route::get('/', [PageController::class, 'index']);
 Route::get('/user/profile', [UserController::class, 'profile'])->name('user.profile');
 
-Route::resource('user', UserController::class);
+Route::resource('users', UserController::class);
 Route::resource('posts', PostsController::class);
+Route::resource('comments', CommentController::class);
 
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
