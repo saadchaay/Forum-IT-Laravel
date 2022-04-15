@@ -41,7 +41,7 @@
                         </th>
 
                         <th class="px-16 py-2">
-                            <span class="text-gray-100 font-semibold">Title</span>
+                            <span class="text-gray-100 font-semibold">Category</span>
                         </th>
 
                         <th class="px-16 py-2">
@@ -58,19 +58,20 @@
                     </tr>
                     </thead>
                     <tbody class="bg-gray-200">
+                    @for($i=0; $i<9; $i++)
                         <tr class="bg-white border-b-2 border-gray-200 text-center">
-                            <td class="flex flex-row items-center justify-center">
+                            <td class="flex items-center justify-center">
                                 <img class="h-8 w-8 rounded-full object-cover " src="https://randomuser.me/api/portraits/men/30.jpg" alt=""/>
                             </td>
                             <td>
-                                <span class="text-center font-semibold">John Doe</span>
+                                <span class="text-center font-semibold">05/06/2020</span>
                             </td>
 
                             <td class="">
-                                <span>05/06/2020</span>
+                                <span>Business intelligence</span>
                             </td>
                             <td class="">
-                                <span>10:00</span>
+                                <span>Lorem Lorem Lorem Lorem</span>
                             </td>
                             <td class="">
                                 <span>12 replies,<a href="{{}}" class="text-blue-700 font-bold"> Show</a></span>
@@ -92,6 +93,7 @@
                               </span>
                             </td>
                         </tr>
+                    @endfor
                     </tbody>
                 </table>
             </div>
