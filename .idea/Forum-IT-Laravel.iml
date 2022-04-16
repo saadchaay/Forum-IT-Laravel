@@ -121,6 +121,21 @@
       <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/sebastian/code-unit" />
       <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/league/event" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/league/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/league/uri-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/symfony/psr-http-message-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/defuse/php-encryption" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/lcobucci/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/laravel/passport" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/firebase/php-jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/php-http/message-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/Forum-app/vendor/nyholm/psr7" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
