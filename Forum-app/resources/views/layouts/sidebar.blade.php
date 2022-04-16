@@ -39,6 +39,13 @@
                     </svg>
                     <a class="hover:text-black transition duration-200 ease-linear" href="{{route('users.index')}}">Users</a>
                 </h3>
+                <h3 class="pl-1 text-sm flex items-center py-4 mb-2 hover:bg-gray-100 hover:text-gray-700 transition duration-200 ease-in">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="black">
+                        <path d="M21 2a8.998 8.998 0 0 0-8.612 11.612L2 24v6h6l10.388-10.388A9 9 0 1 0 21 2zm0 16a7.013 7.013 0 0 1-2.032-.302l-1.147-.348l-.847.847l-3.181 3.181L12.414 20L11 21.414l1.379 1.379l-1.586 1.586L9.414 23L8 24.414l1.379 1.379L7.172 28H4v-3.172l9.802-9.802l.848-.847l-.348-1.147A7 7 0 1 1 21 18z" fill="currentColor">
+                        </path>
+                    </svg>
+                    <a class="hover:text-black transition duration-200 ease-linear" href="{{route('logout')}}">Logout</a>
+                </h3>
             </div>
         </div>
         <div class="flex-auto">
