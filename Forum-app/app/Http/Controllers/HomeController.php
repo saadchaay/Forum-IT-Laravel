@@ -22,7 +22,7 @@ class HomeController extends Controller
      *
      * @return Response
      */
-    public function index(): Response
+    public function index()
     {
         return view('home');
     }
