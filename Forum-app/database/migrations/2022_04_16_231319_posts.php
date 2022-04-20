@@ -15,8 +15,15 @@ class Posts extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('body');
+            $table->string('slug');
+            $table->longText('body');
+            $table->string('image');
+            $table->integer('upVotes');
+            $table->integer('downVotes');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
